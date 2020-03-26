@@ -1,4 +1,4 @@
-# Pinning locations + scale
+# Pinning locations + scale + new addings (bottom)
 
 Our boss liked a lot the map we have developed, now he wants to focus on Spain affection by City, he wants to
 display a map pinning affected locations and scaling that pin according the number of cases affected, something like:
@@ -573,7 +573,7 @@ _./src/index.ts_
 
 const radiusDependingCVCases = (comunidad: string, data: ResultEntry[]) => {
     const entry = data.find(item => item.name === comunidad);
-    const maxAffected = 5000;
+    const maxAffected = 1000;
 ```
 
 - As maxAffected people I put 5000 thousand in order not no be very big our circles
@@ -627,7 +627,6 @@ document
 
 - Lastly we figure it out, there is some troubles in painting the main focus, in first data we have for example Madrid with 587 cases and right now Madrid is 10.000 cases, it is difficult to paint in order to see the scacale, that it is why we add the command in : 
 
-
 _./src/index.ts_
 
 ```diff
@@ -637,4 +636,10 @@ const affectedRadiusScale = d3
   .range([0, 50])
 +  .clamp(true);
 ```
+
+# About 
+
+This task is for Advanced Analytics and Big Data Master in Malaga, it is developed under the guidance of Braulio. More info : 
+
+- https://github.com/Lemoncode
 
