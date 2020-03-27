@@ -355,7 +355,7 @@ _./src/index.ts_
 const affectedRadiusScale = d3
   .scaleLinear()
   .domain([0, maxAffected])
-  .range([0, 50]); // 50 pixel max radius, we could calculate it relative to width and height
+  .range([5, 40]); 
 ```
 - Let's create a helper function to glue the community name with the affected cases.
 
@@ -633,7 +633,7 @@ _./src/index.ts_
 const affectedRadiusScale = d3
   .scaleLinear()
   .domain([0, maxAffected])
-  .range([0, 50])
+  .range([5, 40])
 +  .clamp(true);
 ```
 

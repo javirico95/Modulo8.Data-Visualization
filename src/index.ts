@@ -14,7 +14,7 @@ const radiusDependingCVCases = (comunidad: string, data: ResultEntry[]) => {
 const affectedRadiusScale = d3
   .scaleLinear()
   .domain([0, maxAffected])
-  .range([0, 50])
+  .range([5, 40])
   .clamp(true);
 
   return entry ? affectedRadiusScale(entry.value) : 0;
@@ -45,6 +45,7 @@ svg
   .attr("class", "country")
   // data loaded from json file
   .attr("d", geoPath as any);
+
 
 svg
   .selectAll("circle")
